@@ -7,18 +7,18 @@ import drawCanvas from './DrawCanvas';
 // A basic key to value object to help setup the config values
 // from the given properties.
 const propsToConfig = {
-	// friendCount: 'FRIEND_COUNT',
-	// painterCount: 'PAINTER_COUNT',
+	crackCount: 'CRACK_COUNT',
+	maxCracks: 'MAX_CRACKS',
 	color: 'COLOR',
-	// friction: 'FRICTION'
+	initialCracks: 'INITIAL_CRACKS'
 }
 
 export default class ConfettiCanvas extends Component {
 
 	static propTypes = {
-		friendCount: PropTypes.number,
-		painterCount: PropTypes.number,
-		friction: PropTypes.number,
+		crackCount: PropTypes.number,
+		maxCracks: PropTypes.number,
+		initialCracks: PropTypes.number,
 		color: PropTypes.string
 	};
 
@@ -28,8 +28,6 @@ export default class ConfettiCanvas extends Component {
 			window.removeEventListener('resize', window.resizeSubstrate, false);
 			return;
 		}
-
-		console.log(this.getConfig());
 
 		drawCanvas(el, this.getConfig());
 	}

@@ -32,3 +32,63 @@ const App = () => {
 
 export default App;
 ```
+
+#### Color
+
+The root color of the cracks painter. The painters are the lines that follow the movement and growth of the cracks
+
+```javascript
+const App = () => {
+  ...
+  return (
+    <SubstrateCanvas
+      color="#e58017" />
+  );
+  ...
+};
+```
+
+#### Crack Count
+
+How many cracks are suppose to be running on the canvas at one time. The more cracks there are on the board at one time the fast the board "crystilizes".
+
+```javascript
+const App = () => {
+  ...
+  return (
+    <SubstrateCanvas
+      crackCount={300} />
+  );
+  ...
+};
+```
+
+#### Maximum Cracks
+
+The total amount of cracks that will spawn on the canvas. Cracks only have a small lifespan, they exist until they collide with the side of the canvas or another crack.
+
+```javascript
+const App = () => {
+  ...
+  return (
+    <SubstrateCanvas
+      maxCracks={10000} />
+  );
+  ...
+};
+```
+
+#### Initial Cracks
+
+The initial amount of cracks that are suppose to spawn into the canvas, we need an inital amount of crack to seed the rest of the crack on the canvas.
+
+```javascript
+const App = () => {
+  ...
+  return (
+    <SubstrateCanvas
+      initialCracks={30} />
+  );
+  ...
+};
+```
